@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: Echo Service API
+  description: A simple REST API that echoes back the received JSON data.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+
+paths:
+  /echo:
+    post:
+      summary: Echo back the received JSON data
+      description: This endpoint receives JSON data in the request body and returns the same data in the response.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Any valid JSON object
+      responses:
+        '200':
+          description: Successfully echoed back the data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  echo:
+                    type: object
+                    description: The same JSON data that was sent in the request
+                    example:
+                      message: Hello, world!
+        '400':
+          description: Invalid input or missing JSON data
