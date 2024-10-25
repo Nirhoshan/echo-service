@@ -16,7 +16,7 @@ def complex_calculation(n):
 @app.route('/echo', methods=['POST'])
 def echo():
     data = request.get_json()
-    size = 15
+    size = 100
 
     # Create a large list to consume memory
     memory_consumer = [0] * (size * 1024)
@@ -26,10 +26,10 @@ def echo():
         memory_consumer[i] = i
 
         # Perform complex calculations
-        result = complex_calculation(10)  # Increase this number to increase CPU usage
+        result = complex_calculation(2)  # Increase this number to increase CPU usage
 
         # Matrix-like operations
-        matrix_size = 10
+        matrix_size = 5
         for j in range(matrix_size):
             for k in range(matrix_size):
                 x = math.sin(i + j) * math.cos(k)
