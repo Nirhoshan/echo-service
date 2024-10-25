@@ -26,7 +26,7 @@ def echo():
         memory_consumer[i] = i
 
         # Perform complex calculations
-        result = complex_calculation(200)  # Increase this number to increase CPU usage
+        result = complex_calculation(10)  # Increase this number to increase CPU usage
 
         # Matrix-like operations
         matrix_size = 10
