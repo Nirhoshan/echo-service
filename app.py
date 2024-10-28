@@ -16,7 +16,7 @@ def complex_calculation(n):
 @app.route('/echo', methods=['POST'])
 def echo():
     data = request.get_json()
-    size = 2000
+    size = 200
 
     # Create a large list to consume memory
     memory_consumer = [0] * (size * 1024)
