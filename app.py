@@ -29,7 +29,7 @@ def echo():
         # result = complex_calculation(2)  # Increase this number to increase CPU usage
 
         # Matrix-like operations
-        matrix_size = 5
+        matrix_size = 2
         for j in range(matrix_size):
             for k in range(matrix_size):
                 x = math.sin(i + j) * math.cos(k)
